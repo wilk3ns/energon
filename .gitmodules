@@ -1,0 +1,3 @@
+[submodule "energonsdk"]
+	path = energonsdk
+	url = git@github.com:wilk3ns/energonsdk.git

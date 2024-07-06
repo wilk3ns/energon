@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Energon"
 include(":app")
- 
+include(":energonsdk")
