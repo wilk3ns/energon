@@ -8,6 +8,11 @@ espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.3"
 activityCompose = "1.9.0"
 composeBom = "2024.06.00"
+androidMaterial = "1.12.0"
+googleMaps = "6.0.0"
+playServices = "19.0.0"
+daggerHilt = "2.51.1"
+secretsGradlePlugin = "2.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -23,9 +28,17 @@ androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+android-material = { group = "com.google.android.material", name = "material", version.ref = "androidMaterial"}
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+google-maps = { group = "com.google.maps.android", name = "maps-compose", version.ref = "googleMaps" }
+play-services-maps = {group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServices" }
+dagger-hilt-android = { group = "com.google.dagger", version.ref = "daggerHilt", name = "hilt-android" }
+dagger-hilt-android-compiler = { group = "com.google.dagger", version.ref = "daggerHilt", name = "hilt-android-compiler" }
+secrets-gradle = { module = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin", version.ref = "secretsGradlePlugin" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "daggerHilt" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 
+[bundles]

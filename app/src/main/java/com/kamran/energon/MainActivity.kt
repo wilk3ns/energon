@@ -7,12 +7,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import com.google.maps.android.compose.GoogleMap
+import com.google.maps.android.compose.MapUiSettings
 import com.kamran.energon.ui.theme.EnergonTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
@@ -20,28 +21,20 @@ class MainActivity : ComponentActivity() {
 		setContent {
 			EnergonTheme {
 				Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-					Greeting(
-						name = "Android",
-						modifier = Modifier.padding(innerPadding)
+					GoogleMap(
+						modifier = Modifier.fillMaxSize()
+							.padding(innerPadding),
+						uiSettings = MapUiSettings(
+							compassEnabled = true,
+							rotationGesturesEnabled = true,
+							mapToolbarEnabled = true,
+							myLocationButtonEnabled = true,
+							zoomControlsEnabled = true
+						)
+
 					)
 				}
 			}
 		}
-	}
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-	Text(
-		text = "Hello $name!",
-		modifier = modifier
-	)
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-	EnergonTheme {
-		Greeting("Android")
 	}
 }
