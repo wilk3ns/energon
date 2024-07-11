@@ -5,11 +5,10 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.google.maps.android.compose.GoogleMap
-import com.google.maps.android.compose.MapUiSettings
+import com.kamran.energon.ui.MainView
 import com.kamran.energon.ui.theme.EnergonTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -20,18 +19,10 @@ class MainActivity : ComponentActivity() {
 		enableEdgeToEdge()
 		setContent {
 			EnergonTheme {
-				Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-					GoogleMap(
-						modifier = Modifier.fillMaxSize()
-							.padding(innerPadding),
-						uiSettings = MapUiSettings(
-							compassEnabled = true,
-							rotationGesturesEnabled = true,
-							mapToolbarEnabled = true,
-							myLocationButtonEnabled = true
-						)
-					)
-				}
+				Surface(
+					modifier = Modifier.fillMaxSize(),
+					color = MaterialTheme.colorScheme.background
+				) { MainView() }
 			}
 		}
 	}

@@ -66,6 +66,8 @@ dependencies {
 	implementation(libs.google.maps)
 	implementation(libs.play.services.maps)
 	implementation(libs.dagger.hilt.android)
+	implementation(libs.androidx.lifecycle.viewmodel.compose)
+	implementation(libs.androidx.hilt.navigation.compose)
 	implementation(project(":energonsdk"))
 	implementation(libs.play.services.location)
 	kapt(libs.dagger.hilt.android.compiler)
