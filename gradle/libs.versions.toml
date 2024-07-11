@@ -13,6 +13,7 @@ googleMaps = "6.0.0"
 playServices = "19.0.0"
 daggerHilt = "2.51.1"
 secretsGradlePlugin = "2.0.1"
+playServicesLocation = "21.3.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -35,6 +36,7 @@ play-services-maps = {group = "com.google.android.gms", name = "play-services-ma
 dagger-hilt-android = { group = "com.google.dagger", version.ref = "daggerHilt", name = "hilt-android" }
 dagger-hilt-android-compiler = { group = "com.google.dagger", version.ref = "daggerHilt", name = "hilt-android-compiler" }
 secrets-gradle = { module = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin", version.ref = "secretsGradlePlugin" }
+play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

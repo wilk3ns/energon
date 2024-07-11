@@ -67,6 +67,7 @@ dependencies {
 	implementation(libs.play.services.maps)
 	implementation(libs.dagger.hilt.android)
 	implementation(project(":energonsdk"))
+	implementation(libs.play.services.location)
 	kapt(libs.dagger.hilt.android.compiler)
 	testImplementation(libs.junit)
 	androidTestImplementation(libs.androidx.junit)

@@ -28,10 +28,8 @@ class MainActivity : ComponentActivity() {
 							compassEnabled = true,
 							rotationGesturesEnabled = true,
 							mapToolbarEnabled = true,
-							myLocationButtonEnabled = true,
-							zoomControlsEnabled = true
+							myLocationButtonEnabled = true
 						)
-
 					)
 				}
 			}
