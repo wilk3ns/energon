@@ -3,6 +3,7 @@ package com.kamran.energon.widgets
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -18,8 +19,8 @@ fun CircularInitialsIcon(
 	initials: String,
 	size: Dp,
 	modifier: Modifier = Modifier,
-	backgroundColor: Color = Color.Gray,
-	textColor: Color = Color.White
+	backgroundColor: Color = MaterialTheme.colorScheme.secondary,
+	textColor: Color = MaterialTheme.colorScheme.surfaceDim
 ) {
 	Box(
 		modifier = modifier.size(size),

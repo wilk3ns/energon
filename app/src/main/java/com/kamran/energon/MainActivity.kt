@@ -8,7 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.kamran.energon.ui.MainView
+import com.kamran.energon.presentation.main.MainView
 import com.kamran.energon.ui.theme.EnergonTheme
 import dagger.hilt.android.AndroidEntryPoint
 
